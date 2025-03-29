@@ -1,6 +1,7 @@
 # Text-and-image-dual-channel-encrypted-transmission-system-based-on-QPSK
 
-This experiment utilizes ALM-PLUTO to achieve selective text transmission and encrypted image transmission functionality.
+This project implements a dual-channel encrypted transmission system for text and images based on QPSK (Quadrature Phase Shift Keying) modulation, utilizing the ALM-PLUTO as the physical hardware platform. The system modulates and transmits text and image data in parallel, incorporating key communication processing modules such as frequency offset correction, symbol timing synchronization, and carrier phase recovery. At the receiver end, the original information is demodulated and reconstructed.
+The project is implemented in MATLAB and covers signal encryption, modulation and demodulation, channel modeling and recovery, as well as encryption and decryption of text and images. It serves as an introductory framework for understanding the overall process of encrypted data transmission and recovery in digital communication systems.
 
 ![1743222741787](https://github.com/user-attachments/assets/5ea24533-5867-4cdb-a04d-02a6152d81c8)
 
