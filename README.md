@@ -2,6 +2,10 @@
 
 This experiment utilizes ALM-PLUTO to achieve selective text transmission and encrypted image transmission functionality.
 
+![1743222741787](https://github.com/user-attachments/assets/5ea24533-5867-4cdb-a04d-02a6152d81c8)
+
+
+
 # At the Transmitter:
 
 (1) For text：
