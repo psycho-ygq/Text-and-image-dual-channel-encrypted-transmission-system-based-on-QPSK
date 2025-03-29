@@ -35,3 +35,55 @@ Use MATLAB's built-in freqComp() function for coarse frequency offset correction
 After passing through a reception filter, use MATLAB's built-in symbolSync() function for sample decision, then correct the phase offset with the training symbols to obtain the required data.
 
 Further demodulate, reassemble, and decrypt the received image data, and analyze the bit error rate.
+
+# Result
+
+1. The received signal may experience a carrier frequency offset due to the mismatch between the transmitter and receiver, which causes a global rotation in the constellation diagram. We first apply a coarse frequency offset correction.
+
+2. The sampling points in the communication system may not align with the symbol intervals, leading to a blurred constellation and dispersed symbol points. We address this issue by performing symbol timing recovery.
+
+3. Even after correcting the frequency offset, a constant phase offset may still exist due to channel effects or hardware imperfections (e.g., a fixed rotation angle). Therefore, carrier phase recovery is also necessary.
+
+After correcting frequency offset, phase offset, and symbol timing, the constellation points become highly concentrated around the ideal positions, indicating high signal quality and low bit error rate.
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/308ffa75-4725-4994-a249-70b9962672ff" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/301ba2f2-2376-44cd-a3ba-48017b891935" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/2ce64c8a-b212-42cc-a336-f66ed42a766a" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/34748193-3354-4504-9834-c6b696b4c5ce" width="250"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Coarse Freq. Correction</b></td>
+    <td align="center"><b>Symbol Timing Sync</b></td>
+    <td align="center"><b>Phase Correction</b></td>
+    <td align="center"><b>Final Constellation</b></td>
+
+  </tr>
+</table>
+
+The constellation points are distributed in a cloud-like manner around the ideal positions, indicating the presence of additive white Gaussian noise (AWGN) in the channel, which causes the received signal to deviate from the ideal values. Since most of the points are concentrated near the ideal positions, it suggests that the reception quality is relatively good.
+
+# A Demo
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/bd3841ea-edaf-459f-8f39-d37f507e52f6" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/3ae01370-9f1e-4bac-9d93-c6a43ed4b78a" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/ed41c898-3f2e-41a0-9726-a7bfe3caeb3e" width="300"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Origin image at the Transmitter</b></td>
+    <td align="center"><b>Encrypted image at the Receiver</b></td>
+    <td align="center"><b>Decrypted image at the Receiver</b></td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
